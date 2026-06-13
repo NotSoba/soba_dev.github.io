@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card of Soba_dev </title>
+  <link rel="stylesheet" href="style.css">
+  <audio id="audio" loop src="song/its_all_i_know.mp3"></audio>
+
+</head>
+
+<body>
+  <div id="cursor"></divid></div>
+  <div id = "cursor-trail"></div>
+  <canvas id ="particles"></canvas>
+  <div id="bg"></div>
+
+  <!-- la cartee de profil -->
+  <div id="main">
+    <div class="card">
+      <div class="avatar">
+        <img class ="avatar" src="avatar/avatar.jpg" alt="avatar" sizes="90px" >
+      </div>
+      <h1 class="username">Soba_dev</h1>
+      <p class="bio">Web developer</p>
+      <!-- separateur -->
+      <div class="divider"></div>
+
+      <!-- liens -->
+      <div class="links"></div>
+      <a target="_blank" href="https://www.roblox.com/fr/users/8904861878/profile" class="link-btn">Roblox</a>
+      <a target="_blank" href="https://github.com/NotSoba" class="link-btn">GitHub</a>
+
+      <!-- play musique -->
+
+      <div class= "music-bar">
+        <div class="music-cover"><img src="cover/cover.png" alt="music cover" position: width="40px"></div>
+        <div class="music-info">
+            <div class= "music-title">Its All I Know</div>
+            <div class="music-artist">crustsox</div>
+      </div>
+      <input type="range" id="volume" min="0" max="0.06" step="0.01" value="0.03">
+      <button class="music-btn" id="play-btn">▶</button>
+    </div>
+    <div class="music-progress">
+      <div class="music-progress-fill" id="prog-fill"></div>
+    </div>
+    <audio id="audio" loop src="song/its_all_i_know.mp3"></audio>
+    
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
