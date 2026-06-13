@@ -1,4 +1,4 @@
-# Mon site de profil
+# > soba.dev — profil
 
 Site de profil personnel inspiré de guns.lol
 
