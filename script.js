@@ -6,13 +6,18 @@ const audio = document.getElementById('audio')
 const playBtn = document.getElementById('play-btn')
 const progFill = document.getElementById('prog-fill')
 const volume = document.getElementById('volume')
+const bio = document.querySelector('.bio')
+const texte = "why is it working.."
+let etats = 'texte'
+let index = 0
 let playing = true
 
 
 // taille de la fenetre Canvas
-
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
+
+
 
 const stars = Array.from({ length: 80}, () => ({
     x: Math.random() * canvas.width,
@@ -20,6 +25,17 @@ const stars = Array.from({ length: 80}, () => ({
     rayon: Math.random() * 1.8 + 0.4,
     vitesse: Math.random() * 0.4 + 0.1
 }))
+
+window.addEventListener('resize', function(){
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+
+  stars.forEach(function(star){
+    star.x = Math.random() * canvas.width
+    star.y = Math.random() * convas.height
+  })
+})
+
 document.addEventListener('mousemove',function(e) {
     cursor.style.left = e.clientX - 7 + "px"
     cursor.style.top  = e.clientY - 7 + "px"
@@ -87,6 +103,29 @@ document.addEventListener('click', function(e) {
   }, 500)
 })
 
+function typewriter(){
+  if (etats == 'texte') {
+    if (index < texte.length) {
+      bio.textContent = texte.slice(0, index + 1)
+      index++
+      setTimeout(typewriter, 80)
+    }else{
+      etats = 'efface'
+      setTimeout(typewriter, 1000)
+    }
+  
+  }else if (etats === 'efface'){
+    if(index > 0) {
+      bio.textContent = texte.slice(0, index- 1)
+      index --
+      setTimeout(typewriter,50)
+    }else{
+      etats ='texte'
+      setTimeout(typewriter, 500)
+    }
+  }
+}
+
 
 function animer() {
     ctx.clearRect(0,0, canvas.width, canvas.height)
@@ -135,7 +174,7 @@ function updateProgress(){
     requestAnimationFrame(updateProgress)
 }
 
-
+typewriter()
 animer()
 updateProgress()
 animateTrail()
