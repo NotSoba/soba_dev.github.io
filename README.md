@@ -7,7 +7,8 @@ Site de profil personnel inspiré de guns.lol
 - Particules animé
 - System de musique
 - Bouton intéractif
-
+- animation de pseudo,bio et pfp
+  
 ## Technologies
 - HTML
 - CSS
