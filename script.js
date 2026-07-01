@@ -7,7 +7,10 @@ const playBtn = document.getElementById('play-btn')
 const progFill = document.getElementById('prog-fill')
 const volume = document.getElementById('volume')
 const bio = document.querySelector('.bio')
+
+
 const texte = "why is it working.."
+
 let etats = 'texte'
 let index = 0
 let playing = true
@@ -32,7 +35,7 @@ window.addEventListener('resize', function(){
 
   stars.forEach(function(star){
     star.x = Math.random() * canvas.width
-    star.y = Math.random() * convas.height
+    star.y = Math.random() * canvas.height
   })
 })
 
@@ -96,7 +99,7 @@ document.addEventListener('click', function(e) {
     ripple.style.transform = 'scale(10)'
     ripple.style.opacity = '0'
   })
-
+ 
   // supprime le div après l'animation
   setTimeout(function() {
     ripple.remove()

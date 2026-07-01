@@ -88,7 +88,6 @@ html, body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: rgba(255, 0, 0, 0.185);
-  /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;*/
   font-family: 'Courier New', Courier, monospace;
   font-style:oblique;
   animation: gradient 3.2s linear infinite;
@@ -99,9 +98,6 @@ html, body {
   0%{ background-position: -250% 0%; }
   0%{ background-position: -250% 0%; }
   100%{ background-position: -127% 0%; }
-
-  
-
 }
 
 .bio{
@@ -125,6 +121,7 @@ html, body {
 }
 
 .link-btn {
+  background: linear-gradient(to right,#ff000038,#ff000038, #ff0000, #ff000038, #ff000038);
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -135,13 +132,20 @@ html, body {
   color: rgba(255,255,255,0.8);
   text-decoration: none;
   font-size: 0.85rem;
-  transition: background 0.2s, transform 0.15s;
   font-family: 'Courier New', Courier, monospace;
-
+  animation: traceIgnite 2s linear infinite;
+}
+@keyframes traceIgnite {
+   0%,100%{
+    box-shadow: 0 0 0 0 #ff0000b3;
+  }
+  0%{
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0);
+  }
 }
 
 .link-btn:hover {
-  background: rgba(255,255,255,0.1);
+  background: #e40a0a1a;
   transform: translateY(-2px);
 }
 
